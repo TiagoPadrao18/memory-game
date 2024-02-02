@@ -13,30 +13,36 @@ const emojisArr = [
 
 randomizeEmotes();
 
+const comparatorArr = [];
 
-grid.addEventListener("click",(e)=>{
-  e.target.style.color ="blue";
+grid.addEventListener("click", (e) => {
+  comparatorArr.push(e.target.textContent);
+  console.log(comparatorArr);
+
+  if (comparatorArr[comparatorArr.length - 1] == e.target.emoji) {
+    e.target.style.color = "black";
+    console.log(true);
+  } else {
+    e.target.style.color = "transparent";
+  }
 });
 
+function checkHowManyClicks() {}
 
 function randomizeEmotes() {
-  const emojiArrCopy = emojisArr.map((x) => x); 
-  
+  const emojiArrCopy = emojisArr.map((x) => x);
+
   let count = 0;
   while (emojiArrCopy.length > 0) {
     let randomEmoji = Math.floor(Math.random() * emojiArrCopy.length);
-    console.log(randomEmoji);
 
     if (emojiArrCopy[randomEmoji].triesNumber !== 0) {
       gridBtn[count].innerHTML = emojiArrCopy[randomEmoji].emoji;
       count++;
       emojiArrCopy[randomEmoji].triesNumber--;
-      if (emojiArrCopy[randomEmoji].triesNumber===0){
-        emojiArrCopy.splice(randomEmoji,1);
-        console.log(emojiArrCopy);
+      if (emojiArrCopy[randomEmoji].triesNumber === 0) {
+        emojiArrCopy.splice(randomEmoji, 1);
       }
-    } 
+    }
   }
-
 }
-
