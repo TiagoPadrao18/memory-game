@@ -1,31 +1,28 @@
-html,body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .grid-container {
-    text-align: center;
-    width: 30%;
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  width: 50%;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.grid-container button{
-    
-    border: 1px solid black;
-    padding: 3rem;
+.grid-container button {
+  border: 1px solid black;
+  padding: 3rem;
+  font-size: 3rem;
+  color: transparent;
 }
-
-.grid-container button p {
-
-}
-
