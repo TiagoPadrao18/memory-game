@@ -16,19 +16,30 @@ randomizeEmotes();
 const comparatorArr = [];
 
 grid.addEventListener("click", (e) => {
+  e.target.style.color = "black";
   comparatorArr.push(e.target.textContent);
-  console.log(comparatorArr);
 
-  if (comparatorArr[comparatorArr.length - 1] == e.target.emoji) {
-    e.target.style.color = "black";
-    console.log(true);
-  } else {
-    e.target.style.color = "transparent";
+  if (comparatorArr.length === 2) {
+    if (comparatorArr[0] === comparatorArr[1]) {
+      const rightArr = arrayGridBtn.filter(
+        (e) => e.textContent === comparatorArr[0]
+      );
+      console.log(rightArr);
+      rightArr.forEach((e) => (e.style.color = "black"));
+    } else {
+      const wrongArr = arrayGridBtn.filter(
+        (e) =>
+          e.textContent === comparatorArr[0] ||
+          e.textContent === comparatorArr[1]
+      );
+      console.log(wrongArr);
+      setTimeout(() => {
+        wrongArr.forEach((e) => (e.style.color = "transparent"));
+      }, 1000);
+    }
+    comparatorArr.length = 0;
   }
 });
-
-function checkHowManyClicks() {}
-
 function randomizeEmotes() {
   const emojiArrCopy = emojisArr.map((x) => x);
 
