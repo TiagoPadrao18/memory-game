@@ -26,7 +26,7 @@ const emojisArr = [
 randomizeEmotes();
 
 const comparatorArr = [];
-let counter = 5;
+let counter;
 
 subLives.addEventListener("click", () =>{
     const lifesLeft=  lifes.innerText;
@@ -46,6 +46,7 @@ grid.addEventListener("click", (e) => {
     if(clickTimes===0){
         subLives.disabled=true;
         addLives.disabled=true;
+        counter= parseInt(lifes.innerText)
     }
     clickTimes++;
     console.log(clickTimes);
