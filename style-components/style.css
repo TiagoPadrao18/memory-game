@@ -10,19 +10,44 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column  ;
+  background-color: #dea300c2;
+  background-image: url('/source/conheca-as-savanas-onde-ocorrem-quais-animais-e-plantas-ali-vivem.jpg.webp');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+h1 {
+  color: orange;
+  font-family:'Protest Revolution', sans-serif;
+  font-size: 4rem;
+}
+h2 {
+  color: orange;
+font-family:'Protest Revolution', sans-serif;
 }
 
 .grid-container {
   text-align: center;
   width: 50%;
-  border: 1px solid black;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  border-radius: 1rem;
 }
 
 .grid-container button {
-  border: 1px solid black;
+border: 1px solid orange;
   padding: 3rem;
+  margin: 0.5rem;
   font-size: 3rem;
   color: transparent;
+  border-radius: 1rem;
+  background-color: rgba(167, 38, 38, 0.749);
+  
+}
+
+.grid-container button:hover {
+  background-color: orange;
+  outline: none;
+  transition: 0.3s ease-in;
 }
