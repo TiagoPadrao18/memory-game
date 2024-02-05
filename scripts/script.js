@@ -51,6 +51,7 @@ grid.addEventListener("click", (e) => {
                 btn.style.backgroundColor = "green";
                 btn.disabled = true;
             });
+            processingClick=false;
         } else {
             counter--;
             lifes.innerHTML = counter;
