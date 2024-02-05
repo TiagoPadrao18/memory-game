@@ -10,6 +10,7 @@ const subLives = document.getElementById("lives-sub");
 
 const addLives = document.getElementById("lives-add");
 
+let clickTimes = 0;
 
 let processingClick = false;
 
@@ -41,7 +42,13 @@ addLives.addEventListener("click", () =>{
 
 
 grid.addEventListener("click", (e) => {
-
+    
+    if(clickTimes===0){
+        subLives.disabled=true;
+        addLives.disabled=true;
+    }
+    clickTimes++;
+    console.log(clickTimes);
     if (processingClick || e.target.disabled) {
         return;
     }
