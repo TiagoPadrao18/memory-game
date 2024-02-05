@@ -6,6 +6,11 @@ const arrayGridBtn = Array.from(gridBtn);
 
 const lifes = document.getElementById("lives");
 
+const subLives = document.getElementById("lives-sub");
+
+const addLives = document.getElementById("lives-add");
+
+
 let processingClick = false;
 
 const emojisArr = [
@@ -21,6 +26,19 @@ randomizeEmotes();
 
 const comparatorArr = [];
 let counter = 5;
+
+subLives.addEventListener("click", () =>{
+    const lifesLeft=  lifes.innerText;
+    const updatedLifes = eval(`${lifesLeft}-1`);
+    lifes.innerText = updatedLifes;
+});
+
+addLives.addEventListener("click", () =>{
+    const lifesLeft=  lifes.innerText;
+    const updatedLifes = eval(`${lifesLeft}+1`);
+    lifes.innerText = updatedLifes;
+});
+
 
 grid.addEventListener("click", (e) => {
 
@@ -54,7 +72,8 @@ grid.addEventListener("click", (e) => {
             processingClick=false;
         } else {
             counter--;
-            lifes.innerHTML = counter;
+
+            lifes.innerText = lifes.innerText.substring(0,lifes.innerText.length-2) + counter;
             const wrongArr = arrayGridBtn.filter(
                 (btn) =>
                     btn.textContent === comparatorArr[0] ||
