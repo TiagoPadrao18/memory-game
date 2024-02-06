@@ -6,6 +6,12 @@ const arrayGridBtn = Array.from(gridBtn);
 
 const lifes = document.getElementById("lives");
 
+const subLives = document.getElementById("lives-sub");
+
+const addLives = document.getElementById("lives-add");
+
+let clickTimes = 0;
+
 let processingClick = false;
 
 const emojisArr = [
@@ -20,10 +26,31 @@ const emojisArr = [
 randomizeEmotes();
 
 const comparatorArr = [];
-let counter = 5;
+let counter;
+
+subLives.addEventListener("click", () => {
+    const lifesLeft = lifes.innerText;
+    if (lifesLeft !== "1") {
+        const updatedLifes = eval(`${lifesLeft}-1`);
+        lifes.innerText = updatedLifes;
+    }
+});
+
+addLives.addEventListener("click", () => {
+    const lifesLeft = lifes.innerText;
+
+    const updatedLifes = eval(`${lifesLeft}+1`);
+    lifes.innerText = updatedLifes;
+});
 
 grid.addEventListener("click", (e) => {
-
+    if (clickTimes === 0) {
+        subLives.disabled = true;
+        addLives.disabled = true;
+        counter = parseInt(lifes.innerText);
+    }
+    clickTimes++;
+    console.log(clickTimes);
     if (processingClick || e.target.disabled) {
         return;
     }
@@ -39,7 +66,7 @@ grid.addEventListener("click", (e) => {
     comparatorArr.push(e.target.textContent);
 
     if (comparatorArr.length === 2) {
-      processingClick = true;
+        processingClick = true;
         if (comparatorArr[0] === comparatorArr[1]) {
             const rightArr = arrayGridBtn.filter(
                 (btn) => btn.textContent === comparatorArr[0]
@@ -51,10 +78,13 @@ grid.addEventListener("click", (e) => {
                 btn.style.backgroundColor = "green";
                 btn.disabled = true;
             });
-            processingClick=false;
+            processingClick = false;
         } else {
             counter--;
-            lifes.innerHTML = counter;
+
+            lifes.innerText =
+                lifes.innerText.substring(0, lifes.innerText.length - 2) +
+                counter;
             const wrongArr = arrayGridBtn.filter(
                 (btn) =>
                     btn.textContent === comparatorArr[0] ||
