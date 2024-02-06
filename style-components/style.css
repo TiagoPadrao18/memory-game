@@ -59,3 +59,16 @@ border: 1px solid orange;
   align-items: center;
   gap: .4rem;
 }
+
+.lives button{
+  background-color: transparent;
+  color: orange;
+ border: none;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+
+
+
+
