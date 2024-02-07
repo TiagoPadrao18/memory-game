@@ -44,6 +44,7 @@ border: 1px solid orange;
   color: transparent;
   border-radius: 1rem;
   background-color: rgba(167, 38, 38, 0.749);
+  cursor: pointer;
   
 }
 
@@ -60,6 +61,8 @@ border: 1px solid orange;
   gap: .4rem;
 }
 
+
+
 .lives button{
   background-color: transparent;
   color: orange;
@@ -67,7 +70,10 @@ border: 1px solid orange;
   padding: 0.5rem;
   font-size: 2rem;
   border-radius: 50%;
+  cursor: pointer;
 }
+
+
 
 
 
