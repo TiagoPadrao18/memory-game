@@ -1,3 +1,3 @@
 setTimeout(()=>{
     window.location.href="/index.html";
-},15000);
+},20000);

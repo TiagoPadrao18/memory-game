@@ -17,6 +17,9 @@ body {
   background-size: 100%;
 }
 
+
+
+
 h1 {
   color: orange;
   font-family:'Protest Revolution', sans-serif;
@@ -48,10 +51,14 @@ border: 1px solid orange;
   
 }
 
+
+
+
 .grid-container button:hover {
   background-color: orange;
   outline: none;
   transition: 0.3s ease-in;
+   
 }
 
 .lives{
@@ -66,6 +73,7 @@ border: 1px solid orange;
 .lives button{
   background-color: transparent;
   color: orange;
+
  border: none;
   padding: 0.5rem;
   font-size: 2rem;
@@ -73,8 +81,43 @@ border: 1px solid orange;
   cursor: pointer;
 }
 
+footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+footer h3{
+  color: orange;
+  font-size: 2rem;
+  font-family:'Protest Revolution', sans-serif;
+}
+
+
+#logoGit {
+  width: 10%;
+}
+
+#tiago1{
+  text-decoration: none;
+  color: orange;
+  &:hover{
+    color: rgb(255, 98, 0);
+  }
+
+}
 
 
 
 
-
+#fabio1{
+  text-decoration: none;
+  color: orange;
+  &:hover{
+    color: rgb(255, 98, 0);
+  }
+}
