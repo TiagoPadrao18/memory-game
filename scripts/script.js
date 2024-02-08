@@ -46,6 +46,8 @@ addLives.addEventListener("click", () => {
 });
 
 grid.addEventListener("click", (e) => {
+  e.target.classList.toggle("flip");
+
   if (clickTimes === 0) {
     subLives.disabled = true;
     addLives.disabled = true;
@@ -58,6 +60,7 @@ grid.addEventListener("click", (e) => {
   }
 
   e.target.style.color = "black";
+
 
   //if the array is empty, I add the disabled attribute to the element
   if (comparatorArr.length === 0) {
@@ -77,7 +80,7 @@ grid.addEventListener("click", (e) => {
    
       rightArr.forEach((btn) => {
         btn.style.color = "black";
-        btn.style.backgroundColor = "green";
+        btn.style.backgroundColor = "  rgb(255, 111, 0)";
         winArr.push(btn);
         btn.disabled = true;
       });
@@ -99,6 +102,7 @@ grid.addEventListener("click", (e) => {
 
       setTimeout(() => {
         wrongArr.forEach((btn) => {
+
           btn.style.color = "transparent";
           btn.disabled = false;
         });

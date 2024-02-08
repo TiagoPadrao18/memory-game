@@ -44,17 +44,25 @@ flex-direction: column;
     100% {opacity: 1;}
 }
 
+
+
 .loader {
     margin-top: 180px;
+    opacity: 35%;
     border: 16px solid rgb(255, 213, 0); 
     border-top: 16px solid transparent ;
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    animation: spin 6s linear infinite ;
+    animation: spin 1s linear infinite ;
   }
   
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+
+
+  
+
