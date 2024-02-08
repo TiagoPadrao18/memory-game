@@ -6,6 +6,7 @@ The objective of this project, is the creation of an Memory Game.
 # Featuress ✅
 - Interactivity
 - Loading , win and defeat screens
+- Lives system
 - Music and sounds effects 🎧
 
 # Functionality: ✅
