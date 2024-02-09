@@ -1,7 +1,8 @@
-html,body {
+html,
+body {
     width: 100%;
     height: 100%;
-    margin : 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -31,40 +32,36 @@ video {
     margin-left: 3rem;
     height: 80%;
     width: 36%;
-
 }
 
 .container h1 {
     color: orange;
-    font-family:'Protest Revolution', sans-serif;
+    font-family: "Protest Revolution", sans-serif;
     font-size: 4rem;
-
 }
-.buttons{
+.buttons {
     text-align: center;
-    width: 70%; 
+    width: 70%;
     height: 50%;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
 }
 
-.buttons a{
+.buttons a {
     background-color: transparent;
     border: 1px solid orange;
     padding: 1rem;
     border-radius: 1rem;
-    font-family:'Protest Revolution', sans-serif;
+    font-family: "Protest Revolution", sans-serif;
     color: orange;
     font-size: 1rem;
     text-decoration: none;
-
 }
 
-
-.buttons a:hover{
+.buttons a:hover {
     background-color: orange;
-    transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-outƒ;
     color: white;
     cursor: pointer;
 }
