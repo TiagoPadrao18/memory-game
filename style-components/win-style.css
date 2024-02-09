@@ -6,7 +6,6 @@ html,body {
 }
 
 body {
-background-image: url("/source/lionWin.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 display: flex;
@@ -16,7 +15,16 @@ align-items: center;
 }
 
 
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
 .container{
+    position: fixed;
     display: flex;
     align-items: center;
     flex-direction: column;
