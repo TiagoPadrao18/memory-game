@@ -17,11 +17,11 @@ let processingClick = false;
 
 const emojisArr = [
   { emoji: "🦁", triesNumber: 2 },
-  { emoji: "🦊", triesNumber: 2 },
-  { emoji: "🐯", triesNumber: 2 },
+  { emoji: "🦒", triesNumber: 2 },
+  { emoji: "🐜", triesNumber: 2 },
   { emoji: "🦅", triesNumber: 2 },
   { emoji: "🐗", triesNumber: 2 },
-  { emoji: "🐒", triesNumber: 2 },
+  { emoji: "🦓", triesNumber: 2 },
 ];
 
 randomizeEmotes();
