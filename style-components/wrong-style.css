@@ -1,57 +1,57 @@
 html,
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-image: url("/source/loseKing.avif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
+    background-image: url("/source/loseKing.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-left: 3rem;
-  height: 80%;
-  width: 36%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 3rem;
+    height: 80%;
+    width: 36%;
 }
 
 .container h1 {
-  color: orange;
-  font-family: "Protest Revolution", sans-serif;
-  font-size: 4rem;
+    color: orange;
+    font-family: "Protest Revolution", sans-serif;
+    font-size: 4rem;
 }
 
 .buttons {
-  text-align: center;
-  width: 70%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
+    text-align: center;
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
 }
 
 .buttons a {
-  background-color: transparent;
-  border: 1px solid orange;
-  padding: 1rem;
-  border-radius: 1rem;
-  font-family: "Protest Revolution", sans-serif;
-  color: orange;
-  font-size: 1rem;
-  text-decoration: none;
+    background-color: transparent;
+    border: 1px solid orange;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-family: "Protest Revolution", sans-serif;
+    color: orange;
+    font-size: 1rem;
+    text-decoration: none;
 }
 
 .buttons a:hover {
-  background-color: orange;
-  transition: 0.2s ease-in-out;
-  color: white;
-  cursor: pointer;
+    background-color: orange;
+    transition: 0.2s ease-in-out;
+    color: white;
+    cursor: pointer;
 }
